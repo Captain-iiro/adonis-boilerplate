@@ -21,14 +21,14 @@ export default class UsersController {
 
       await User.create(data)
 
-      session.flash('success', 'Usuário criado com sucesso')
+      session.flash('success', 'Utilisateur créé avec succès')
 
       return response.redirect().toRoute('admin_users.index')
     } catch (error) {
       if(error.flashToSession){
         session.flash('errors', error.messages)
       } else {
-        session.flash('error', 'Ocorreu um erro ao cadastrar. Verifique os dados e tente novamente')
+        session.flash('error', 'Une erreur s\'est produite lors de l\'inscription. Veuillez vérifier vos informations et réessayer.')
       }
       return response.redirect().back()
     }
@@ -55,13 +55,13 @@ export default class UsersController {
       }
       await user.save()
 
-      session.flash('success', 'Usuário editado com sucesso')
+      session.flash('success', 'L\'utilisateur a modifié avec succès')
       return response.redirect().toRoute('admin_users.index')
     } catch (error) {
       if(error.flashToSession){
         session.flash('errors', error.messages)
       } else {
-        session.flash('error', 'Ocorreu um erro ao salvar. Verifique os dados e tente novamente')
+        session.flash('error', 'Une erreur s\'est produite lors de l\'enregistrement. Veuillez vérifier vos données et réessayer.')
       }
       return response.redirect().back()
     }
@@ -73,10 +73,10 @@ export default class UsersController {
 
       await user.delete()
 
-      session.flash('success', 'Usuário removido com sucesso')
+      session.flash('success', 'L\'utilisateur a supprimé avec succès')
       return response.redirect().toRoute('admin_users.index')
     } catch (error) {
-      session.flash('error', 'Ocorreu um erro. Tente novamente mais tarde')
+      session.flash('error', 'Une erreur s\'est produite lors de la suppression. Veuillez réessayer plus tard.')
       return response.redirect().back()
     }
   }

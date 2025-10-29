@@ -36,7 +36,7 @@ export default class AuthController {
       await new ForgotPassword(user).send()
     }
     session.flash('success',
-      'Caso o e-mail exista em nossa base, você receberá um e-mail com instruções para redefinir sua senha'
+      'Si l\'e-mail existe dans notre base de données, vous recevrez un e-mail contenant des instructions pour réinitialiser votre mot de passe.'
     )
     return response.redirect().toRoute('forgot-password')
   }
@@ -61,7 +61,7 @@ export default class AuthController {
     user.password = password
     await user.save()
 
-    session.flash('success', 'Senha alterada com sucesso')
+    session.flash('success', 'Mot de passe modifié avec succès')
     return response.redirect().toRoute('admin.login')
   }
 }

@@ -51,11 +51,11 @@ export default class UserValidator {
    *
    */
   public messages: CustomMessages = {
-    'name.required': 'O campo nome é obrigatório.',
-    'email.required': 'O campo email é obrigatório.',
-    'email.email': 'Digite um endereço de email válido.',
-    'email.unique': 'O email já está em uso.',
-    'password.required': 'O campo senha é obrigatório.',
-    'password.minLength': 'A senha deve ter no mínimo 8 caracteres.',
+    'name.required': 'Le champ nom est obligatoire.',
+    'email.required': 'Le champ email est obligatoire.',
+    'email.email': 'Veuillez entrer une adresse email valide.',
+    'email.unique': 'L\'email est deja en cours d\'utilisation.',
+    'password.required': 'Le champ mot de passe est obligatoire.',
+    'password.minLength': 'Le mot de passe doit contenir au moins 8 caracteres.',
   }
 }

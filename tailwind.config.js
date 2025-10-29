@@ -200,8 +200,6 @@ module.exports = {
     boxShadow: ['focus', 'dark:focus'],
   },
   plugins: [
-    require('tailwindcss-multi-theme'),
-    require('@tailwindcss/custom-forms'),
     plugin(({ addUtilities, e, theme, variants }) => {
       const newUtilities = {}
       Object.entries(theme('colors')).map(([name, value]) => {

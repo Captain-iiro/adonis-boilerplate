@@ -1,14 +1,14 @@
 @layout('layouts/admin')
 
-@set('title', 'Usuários')
+@set('title', 'Utilisateurs')
 
 @section('body')
 <div class="container grid px-6 mx-auto">
     <div class="flex justify-between items-center">
         <h2 class="my-6 text-2xl font-semibold text-gray-700 dark:text-gray-200">
-            Usuários
+            Utilisateurs
         </h2>
-        <a href="{{ route('admin_users.create')}}" class="btn-default">Adicionar</a>
+        <a href="{{ route('admin_users.create')}}" class="btn-default">Ajouter</a>
     </div>
 
 
@@ -18,9 +18,9 @@
                 <thead>
                     <tr
                         class="text-xs font-semibold tracking-wide text-left text-gray-500 uppercase border-b dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800">
-                        <th class="px-4 py-3">Nome</th>
+                        <th class="px-4 py-3">Nom</th>
                         <th class="px-4 py-3">E-mail</th>
-                        <th class="px-4 py-3">Data de cadastro</th>
+                        <th class="px-4 py-3">Date d'inscription</th>
                         <th class="px-4 py-3"></th>
                     </tr>
                 </thead>
