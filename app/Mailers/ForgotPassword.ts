@@ -15,7 +15,7 @@ export default class ForgotPassword extends BaseMailer {
       .makeSigned('recover-password', { expiresIn: '1h'})
 
     message
-      .subject('Recuperação de senha')
+      .subject('Récupération de mot de passe')
       .from('noreply@example.com')
       .to(this.user.email)
       .htmlView('emails/forgot-password', {
